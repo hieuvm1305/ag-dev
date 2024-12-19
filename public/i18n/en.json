@@ -1,0 +1,7 @@
+{
+    "hello": "Hello {{name}}",
+    "log_in": "Log in",
+    "username": "Username",
+    "account": "Account",
+    "password": "Pasword"
+}

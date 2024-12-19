@@ -1,0 +1,7 @@
+{
+    "hello": "Xin chào {{name}}",
+    "log_in": "Đăng nhập",
+    "username": "Tên người dùng",
+    "account": "Tài khoản",
+    "password": "Mật khẩu"
+}

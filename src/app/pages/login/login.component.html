@@ -1,0 +1,28 @@
+<div class="background">
+  <div class="wrapper">
+    <div class="content">
+      <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your username!">
+            <nz-input-group>
+              <input formControlName="username" nz-input placeholder="username" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your Password!">
+            <nz-input-group>
+              <input formControlName="password" nz-input type="password" placeholder="Password" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <button nz-button nzType="primary" [disabled]="!validateForm.valid">{{'log_in' | translate}}</button>
+          </nz-form-control>
+        </nz-form-item>
+      </form>
+    </div>
+  </div>
+  <a routerLink="../hello" routerLinkActive="active">Second Component</a>
+</div>
