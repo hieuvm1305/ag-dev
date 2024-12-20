@@ -10,7 +10,7 @@ import { GlobalModules } from '../../global.module';
 export class HelloComponent {
   name: string = 'John'
   counter = 1
-  text = ''
+  text = 'Hi'
   increase() {
     this.counter += 1
   }
