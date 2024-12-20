@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { GlobalModules } from '../../global.module';
 @Component({
   selector: 'app-hello',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [...GlobalModules],
   templateUrl: './hello.component.html',
   styleUrl: './hello.component.scss'
 })
 export class HelloComponent {
   name: string = 'John'
   counter = 1
+  text = ''
   increase() {
     this.counter += 1
   }
