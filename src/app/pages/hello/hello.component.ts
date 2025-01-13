@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GlobalModules } from '../../global.module';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-hello',
   standalone: true,
@@ -11,13 +12,15 @@ export class HelloComponent {
   name: string = 'John'
   counter = 1
   text = 'Hddi'
-  text = 'Hi2'
   increase() {
+    let params = this.route.params
     this.counter += 1
   }
   decrease() {
     this.counter -= 1 
   }
 
-  constructor() {}
+  constructor(
+    private route : ActivatedRoute
+  ) {}
 }

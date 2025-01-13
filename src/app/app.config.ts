@@ -20,7 +20,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 import { withFetch } from '@angular/common/http';
 registerLocaleData(en);
-
+import { provideState, provideStore } from '@ngrx/store';
+import { AuthReducer } from './store/user/user.reducer';
+import { provideEffects } from '@ngrx/effects';
+import { AuthEffect } from './store/user/user.effect';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './i18n/', '.json');
 }
@@ -41,5 +44,8 @@ export const appConfig: ApplicationConfig = {
       },
       defaultLanguage: 'vi',
     }),
+    provideStore(),
+    provideState({name: 'auth', reducer: AuthReducer}),
+    provideEffects(AuthEffect)
   ],
 };
