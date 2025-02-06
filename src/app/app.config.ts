@@ -22,8 +22,9 @@ import { withFetch } from '@angular/common/http';
 registerLocaleData(en);
 import { provideState, provideStore } from '@ngrx/store';
 import { AuthReducer } from './store/user/user.reducer';
+import { CounterReducer } from './store/counter/counter.reducer';
 import { provideEffects } from '@ngrx/effects';
-import { AuthEffect } from './store/user/user.effect';
+import { MoviesEffects } from './store/user/user.effect';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './i18n/', '.json');
 }
@@ -46,6 +47,7 @@ export const appConfig: ApplicationConfig = {
     }),
     provideStore(),
     provideState({name: 'auth', reducer: AuthReducer}),
-    provideEffects(AuthEffect)
+    provideState({name: 'counter', reducer: CounterReducer}),
+    provideEffects(MoviesEffects)
   ],
 };

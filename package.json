@@ -25,9 +25,12 @@
     "@ngrx/store": "^18.1.1",
     "@ngx-translate/core": "^16.0.3",
     "@ngx-translate/http-loader": "^16.0.0",
+    "@tailwindcss/postcss": "^4.0.3",
     "express": "^4.18.2",
     "ng-zorro-antd": "^18.2.1",
+    "postcss": "^8.5.1",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.0.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
   },
